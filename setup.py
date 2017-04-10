@@ -1,10 +1,8 @@
 from setuptools import setup
 
-setup(name='YourAppName',
+setup(name='MAT-Askbot',
       version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
-      url='http://www.python.org/sigs/distutils-sig/',
-#      install_requires=['Django>=1.3'],
+      description='Askbot site for the MAT programme',
+      author='Tom Gurion',
+      author_email='t.gurion@qmul.ac.uk',
      )
