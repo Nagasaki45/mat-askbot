@@ -12,6 +12,9 @@ except IOError:
 # line, it's possible required libraries won't be in your searchable path
 #
 
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
 
