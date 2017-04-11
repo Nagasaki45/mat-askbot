@@ -182,8 +182,9 @@ AUTHENTICATION_BACKENDS = (
 
 #logging settings
 LOG_FILENAME = 'askbot.log'
+LOG_DIR = os.environ.get('OPENSHIFT_LOG_DIR', os.path.join(os.path.dirname(__file__), 'log'))
 logging.basicConfig(
-    filename=os.path.join(os.path.dirname(__file__), 'log', LOG_FILENAME),
+    filename=os.path.join(LOG_DIR, LOG_FILENAME),
     level=logging.CRITICAL,
     format='%(pathname)s TIME: %(asctime)s MSG: %(filename)s:%(funcName)s:%(lineno)d %(message)s',
 )
