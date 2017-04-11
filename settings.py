@@ -64,10 +64,10 @@ LANGUAGES = (('en', 'English'),)
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'askbot', 'upfiles')
 MEDIA_URL = '/upfiles/'
-STATIC_URL = '/m/'#this must be different from MEDIA_URL
+STATIC_URL = '/static/'  #this must be different from MEDIA_URL
 
 PROJECT_ROOT = os.path.dirname(__file__)
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'wsgi', 'static')
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -210,7 +210,6 @@ CELERY_ALWAYS_EAGER = True
 import djcelery
 djcelery.setup_loader()
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 STATICFILES_DIRS = (
     ('default/media', os.path.join(ASKBOT_ROOT, 'media')),
 )
